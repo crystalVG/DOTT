@@ -1,0 +1,23 @@
+pipeline {	
+	agent any
+  
+
+		stages {
+	    stage('Unit Test') {
+				steps {
+				    sh '''
+					      echo "Unit testing"
+				   '''
+			  }
+			}
+      stages {
+	    stage('Static code analysis') {
+				steps {
+				    sh '''
+					      echo "Unit testing"
+				    '''
+			  }
+			}
+  }
+} 
+ 
