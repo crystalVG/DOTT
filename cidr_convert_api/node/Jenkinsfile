@@ -4,12 +4,11 @@ pipeline {
 stages {
 		stage('Unit Test') {
 			steps {
-				sh '''
-				 echo "Unit testing"
-				   '''
+				dir {"node"}{
+					sh "npm test"
 			  }
 			}
-    
+		}
 		stage('Static code analysis') {
 				steps {
 				    sh '''
