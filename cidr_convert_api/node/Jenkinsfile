@@ -9,12 +9,5 @@ stages {
 			  }
 			}
 		}
-		stage('Static code analysis') {
-				steps {
-				    sh '''
-					      echo "Unit testing"
-				    '''
-			}
-		}
   	}
 } 
