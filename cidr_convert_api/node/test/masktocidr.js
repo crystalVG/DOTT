@@ -17,7 +17,7 @@ describe('maskToCidrFunction()', function () {
     expect("0.0.0.0").to.be.equal("Invalid");
     expect("256.0.0.0").to.be.equal("Invalid");
     expect("a.b.c.d").to.be.equal("Invalid");
-    expect("192.168.0.0").to.be.equal("Invalid");
+    expect("IP_ADDRESS").to.be.equal("Invalid");
 
   });
 });
