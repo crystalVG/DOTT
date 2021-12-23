@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage('Static Code Analysis') {
       steps  {
-        withSonarQubeEnv('sonarcloud') {
+        withSonarQubeEnv('Sonarcloud') {
           sh '${SCANNER_HOME}/bin/sonar-scanner'
         }
       }
