@@ -1,13 +1,16 @@
 pipeline {	
 	agent any
+	    environment {
+    NODE_SCANNER = tool 'Nodejs'
+  }
   
 stages {
 		stage('Unit Test') {
 			steps {
-				dir {"node"}{
-					sh "npm test"
-			  }
+				 nodejs(nodeJSInstallationName: 'Nodejs') {
+                    sh 'npm run test'
+                }
 			}
 		}
   	}
-} 
+}
