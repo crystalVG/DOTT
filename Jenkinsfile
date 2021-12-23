@@ -1,10 +1,16 @@
 pipeline {	
 	agent any
 	    environment {
-    NODE_SCANNER = tool 'Nodejs'
+    SCANNER_HOME = tool 'sonar'			
   }
   
 stages {
+		stage('Static Code Analysis') {
+			step  {
+				 withSonarQubeEnv('sonarqube') {
+           	    sh '${SCANNER_HOME}/bin/sonar-scanner'
+       	 }
+	}
 		stage('Unit Test') {
 			steps {
 				 nodejs(nodeJSInstallationName: 'Nodejs') {
@@ -13,7 +19,8 @@ stages {
 		    npm run test''' 			 
 					
          }
-			}
-		}
+	}
+		
+    }
   }
 }
