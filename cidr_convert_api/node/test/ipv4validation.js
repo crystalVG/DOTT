@@ -8,7 +8,7 @@ describe('ipv4ValidationFunction()', function () {
 
     expect(ipv4ValidationFunction("127.0.0.1")).to.be.true;
     expect(ipv4ValidationFunction("0.0.0.0")).to.be.true;
-    expect(ipv4ValidationFunction("192.168.0.1")).to.be.true;
+    expect(ipv4ValidationFunction("IP_ADDRESS")).to.be.true;
     expect(ipv4ValidationFunction("255.255.255.255")).to.be.true;
   });
 
