@@ -6,8 +6,8 @@ const expect = chai.expect;
 describe('maskToCidrFunction()', function () {
   it('should return a cidr', function () {
 
-    expect("8").to.be.equal(maskToCidrFunction("255.0.0.0"));
-    expect("16").to.be.equal(maskToCidrFunction("255.255.0.0"));
+    expect("8").to.be.equal(maskToCidrFunction("IP_ADDRESS"));
+    expect("16").to.be.equal(maskToCidrFunction("IP_ADDRESS"));
     expect("24").to.be.equal(maskToCidrFunction("IP_ADDRESS"));
     expect("32").to.be.equal(maskToCidrFunction("255.255.255.255"));
   });
