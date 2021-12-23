@@ -8,8 +8,8 @@ stages {
 		stage('Unit Test') {
 			steps {
 				 nodejs(nodeJSInstallationName: 'Nodejs') {
-                    sh 'cd ./cidr_convert_api/node/'
-		    sh 'npm run test' 			 
+                    sh '''cd ./cidr_convert_api/node/'
+		    npm run test''' 			 
 					
          }
 			}
