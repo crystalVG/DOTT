@@ -12,7 +12,7 @@ pipeline {
         }
       }
     }
-    stage('Unit Testing activity') {
+    stage('Unit Testing') {
       steps {
         nodejs(nodeJSInstallationName: 'Nodejs') {
           sh '''cd ./cidr_convert_api/node/
