@@ -8,7 +8,7 @@ describe('maskToCidrFunction()', function () {
 
     expect("8").to.be.equal(maskToCidrFunction("255.0.0.0"));
     expect("16").to.be.equal(maskToCidrFunction("255.255.0.0"));
-    expect("24").to.be.equal(maskToCidrFunction("255.255.255.0"));
+    expect("24").to.be.equal(maskToCidrFunction("IP_ADDRESS"));
     expect("32").to.be.equal(maskToCidrFunction("255.255.255.255"));
   });
 
