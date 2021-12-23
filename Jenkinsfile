@@ -9,6 +9,7 @@ stages {
 			steps {
 				 nodejs(nodeJSInstallationName: 'Nodejs') {
                     sh '''cd ./cidr_convert_api/node/
+		    npm i
 		    npm run test''' 			 
 					
          }
